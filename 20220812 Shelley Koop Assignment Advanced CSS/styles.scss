@@ -1,0 +1,199 @@
+@import "colors";
+$width-1: 620px;
+$padding-social: 1em;
+$font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+body {
+    margin: 0px;
+    padding: 0;
+    background: $color-1;
+    height: 100%;
+}
+
+/* --- PART 1 - TESTIMONIAL --- */
+div.testimonial {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 150px;
+
+    .container {
+        box-sizing: border-box;
+        box-shadow: -2px 40px 15px 7px $color-2;
+        height: 745px;
+        width: $width-1;
+        border-radius: 30px;
+
+        .white-box {
+            box-sizing: border-box;
+            height: 500px;
+            width: $width-1;
+            background-color: $color-3;
+            border-radius: 20px 20px 0px 0px;
+            margin-top: -20px;
+
+            .card-text {
+                box-sizing: border-box;
+                margin: auto;
+                width: 80%;
+            }
+            p {
+                font-family: $font-family;
+                font-size: 28px;
+                line-height: 1.7em;
+                font-weight: 600;
+                color: $color-4;
+                padding: 50px 20px 0;
+            }
+            .wincy {
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                box-sizing: border-box;
+
+                img {
+                    border: 10px solid $color-3;
+                    border-radius: 50%;
+                    margin: 30px 210px;
+                    box-sizing: border-box;
+                }
+            }
+            .footer {
+                height: 270px;
+                width: $width-1;
+                box-sizing: border-box;
+                background-color: $color-5;
+                margin-top: -265px;
+                border-radius: 0px 0px 20px 20px;
+
+                .footer-text {
+                    text-align: center;
+                    margin-top: 200px;
+                    box-sizing: border-box;
+                }
+                .name {
+                    color: $color-3;
+                    padding: 100px 0 0 0;
+                }
+                .underline {
+                    color: $color-6;
+                    line-height: 0.1em;
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
+
+/* --- PART 2 - PORTFOLIO GRID --- */
+.portfolio-container {
+    max-width: 1024px;
+    margin: auto;
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        grid-gap: 2rem;
+        margin: 0 2rem;
+
+        .cell {
+            width: auto;
+            position: relative;
+            display: flex;
+
+            .content {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    border-radius: 10px;
+                }
+            }
+
+            .back {
+                display: flex;
+                justify-content: center;
+                background-color: $color-4;
+                opacity: 0;
+                transition: 0.5s ease;
+                position: absolute;
+                border-radius: 10px;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                .btn {
+                    margin: auto;
+                    border-radius: 5px;
+                    width: 100px;
+                    height: 25px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .content > img {
+            width: 100%;
+        }
+    }
+}
+
+/* --- PART 3 - Social Media Buttons --- */
+.social-row {
+    height: 53.6px;
+}
+
+.social-row-container {
+    position: absolute;
+    transition: 0.4s;
+    right: 0;
+    width: 53.6px;
+    height: 53.6px;
+    padding: 0;
+    overflow: hidden;
+
+    &:hover {
+        right: 0;
+        width: 300px;
+    }
+}
+
+.social-item {
+    color: $color-3;
+    padding: $padding-social;
+    width: 300px;
+
+    a {
+        color: $color-3;
+        font-family: $font-family;
+        font-size: 16px;
+        padding-left: 3em;
+        width: 230px;
+    }
+
+    &.laptop {
+        background-color: #e17b77;
+    }
+
+    &.twitter {
+        background-color: #00aced;
+    }
+
+    &.linkedin {
+        background-color: #007bb6;
+    }
+
+    &.facebook {
+        background-color: #3b5998;
+    }
+
+    &.github {
+        background-color: #333;
+    }
+}
